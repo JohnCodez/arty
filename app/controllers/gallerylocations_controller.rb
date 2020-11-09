@@ -22,4 +22,4 @@ class GallerylocationsController < ApplicationController
     def gallerylocation_params
         params.require(:gallerylocation).permit(:name, :location)
     end
-end
+end 
