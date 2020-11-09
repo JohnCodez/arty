@@ -1,0 +1,6 @@
+<h1>Gallery locations</h1>
+
+<% @gallerylocations.each do |gallerylocation|%>
+<h2><%= link_to gallerylocation.name, gallerylocation_path(gallerylocation) %></h2>
+<h4>Location: <%= gallerylocation.location %></h4>
+<% end %>

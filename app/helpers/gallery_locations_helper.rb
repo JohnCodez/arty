@@ -1,0 +1,2 @@
+module GalleryLocationsHelper
+end

@@ -1,0 +1,7 @@
+<h1>Artworks</h1>
+
+<% @artworks.each do |artwork|%>
+<h2><%= link_to artwork.name, artwork_path(artwork) %></h2>
+<% end %>
+
+
