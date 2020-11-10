@@ -1,5 +1,5 @@
 <h1>Enter Gallery Location</h1>
-<%= form_for @gallerylocations do |f| %>
+<%= form_for @gallerylocation do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
 
@@ -7,4 +7,10 @@
     <%= f.text_field :location %>
 
     <%= f.submit %>
+<% end %>
+
+<% if flash[:gallerylocation_errors] %>
+    <% flash[:gallerylocation_errors].each do |error| %>
+        <p style="color:red;"> <%= error %></p>
     <% end %>
+<% end %>

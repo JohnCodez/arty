@@ -1,3 +1,6 @@
 <h1><%= @artwork.name %></h1>
 <h4>Size: <%= @artwork.size %></h4>
 <h4>Medium: <%= @artwork.medium %></h4>
+<h4>Specialist: <%= link_to @artwork.specialist.name, specialist_path(@artwork.specialist) %> </h4>
+
+<p> <%= link_to "Back", :back %> </p>

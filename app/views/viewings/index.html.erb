@@ -1,7 +1,10 @@
 <h1>Viewings</h1>
 
 <% @viewings.each do |viewing|%>
-<h2>Time: <%= viewing.time %></h2>
-<h4>Day: <%= viewing.day %></h4>
+<h3><%= link_to viewing.artwork.name, viewing_path(viewing) %></h3>
+<p>Time: <%= viewing.time %></p>
+<p>Day: <%= viewing.day %></p>
 <% end %>
+
+
 

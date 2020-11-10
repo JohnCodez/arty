@@ -4,7 +4,7 @@
 <%= f.text_field :time %>
 
 <%= f.label :day %>
-<%= f.text_field :day %>
+<%= f.select :day, ['Friday', 'Saturday', 'Sunday'] %>
 
 <%= f.label :artwork_id %>
 <%= f.collection_select :artwork_id, Artwork.all, :id, :name %>
@@ -12,9 +12,12 @@
 <%= f.label :user_id %>
 <%= f.collection_select :user_id, User.all, :id, :name %>
 
-<%= f.label :comments %>
-<%= f.text_field :comments %>
-
 <%= f.submit %>
 <%end%>
+
+<% if flash[:viewing_errors] %>
+    <% flash[:viewing_errors].each do |error| %>
+        <p style="color:red;"> <%= error %></p>
+    <% end %>
+<% end %>
 

@@ -1,4 +1,8 @@
 <h1>Enter Artwork</h1>
+
+
+
+
 <%= form_for @artwork do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -16,4 +20,10 @@
     <%= f.collection_select :specialist_id, Specialist.all, :id, :name %>
 
     <%= f.submit %>
+<% end %>
+
+<% if flash[:artwork_errors] %>
+    <% flash[:artwork_errors].each do |error| %>
+        <p style="color:red;"> <%= error %></p>
     <% end %>
+<% end %>

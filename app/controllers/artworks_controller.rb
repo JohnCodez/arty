@@ -13,9 +13,14 @@ class ArtworksController < ApplicationController
     end
 
     def create
-        artwork = Artwork.create(artwork_params)
+        @artwork = Artwork.create(artwork_params)
 
-        redirect_to artwork_path(artwork)
+        if @artwork.valid?
+            redirect_to artwork_path(@artwork)
+        else
+            flash[:artwork_errors] = @artwork.errors.full_messages
+            redirect_to new_artwork_path
+        end
     end
 
     private

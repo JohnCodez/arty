@@ -12,9 +12,14 @@ class SpecialistsController < ApplicationController
     end
 
     def create
-        specialist = Specialist.create(specialist_params)
+        @specialist = Specialist.create(specialist_params)
 
-        redirect_to specialist
+        if @specialist.valid?
+            redirect_to specialist_path(@specialist)
+        else
+            flash[:specialist_errors] = @specialist.errors.full_messages
+            redirect_to new_specialist_path
+        end
     end
 
     private

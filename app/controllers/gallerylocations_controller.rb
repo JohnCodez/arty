@@ -8,13 +8,18 @@ class GallerylocationsController < ApplicationController
     end
 
     def new
-        @gallerylocation = Artwork.new
+        @gallerylocation = Gallerylocation.new
     end
 
     def create
-        gallerylocation = Gallerylocation.create(gallerylocation_params)
+        @gallerylocation = Gallerylocation.create(gallerylocation_params)
 
-        redirect_to gallerylocation_path
+        if @gallerylocation.valid?
+            redirect_to gallerylocation_path(@gallerylocation)
+        else
+            flash[:gallerylocation_errors] = @gallerylocation.errors.full_messages
+            redirect_to new_gallerylocation_path
+        end
     end
 
     private

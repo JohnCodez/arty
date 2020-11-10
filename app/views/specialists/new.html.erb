@@ -14,3 +14,9 @@
 <%= f.submit %>
 <%end%>
 
+<% if flash[:specialist_errors] %>
+    <% flash[:specialist_errors].each do |error| %>
+        <p style="color:red;"> <%= error %></p>
+    <% end %>
+<% end %>
+

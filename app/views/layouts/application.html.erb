@@ -9,6 +9,20 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <ul class="nav">
+      <li><%= link_to "Artworks", artworks_path %></li>
+      <li><%= link_to "Viewings", viewings_path %></li>
+      <li><%= link_to "Specialists", specialists_path %></li>
+      <li><%= link_to "Gallery Locations", gallerylocations_path %></li>
+
+      <% if @current_user %>
+        <li class="right">Welcome!!! <%= @current_user.name %></li>
+        <li class="right"><%= link_to "Log Out", logout_path, method: :delete %></li>
+      <% else %>
+        <li class="right"><%= link_to "Sign Up", new_user_path %></li>
+      <% end %>
+    </ul>
+
   <body>
     <%= yield %>
   </body>

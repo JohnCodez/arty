@@ -26,7 +26,7 @@ Gallerylocation.create!(name: Faker::Games::Witcher.witcher, location: Faker::Ga
  end 
 
 5.times do
-Artwork.create!(name: Faker::Games::Fallout.character, size: "10 + 10", medium: "art", gallerylocation_id: Gallerylocation.all.sample.id, specialist_id: Specialist.all.sample.id)
+Artwork.create!(name: Faker::Books::CultureSeries.book, size: "10 + 10", medium: "art", gallerylocation_id: Gallerylocation.all.sample.id, specialist_id: Specialist.all.sample.id)
 end 
 
 5.times do 

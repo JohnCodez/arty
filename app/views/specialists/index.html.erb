@@ -1,6 +1,6 @@
 <h1>Specialists</h1>
 
-<% @specialists.each do |speciallist|%>
-<h2><%= specialist.name %></h2>
+<% @specialists.each do |specialist|%>
+<h2><%= link_to specialist.name, specialist_path(specialist) %></h2>
 <h4>Speciality:<%= specialist.speciality %></h4>
 <% end %>

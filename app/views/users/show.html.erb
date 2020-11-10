@@ -1,0 +1,16 @@
+<h2><%= @user.name%></h2>
+
+<ul>
+<% @user.viewings.each do |viewing| %>
+<li>
+<%= link_to viewing.artwork.name, artwork_path(viewing.artwork) %>
+<%= viewing.time %>
+
+<%end%>
+</li>
+</ul>
+
+
+
+
+<%= link_to "Back", :back %>
