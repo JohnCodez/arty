@@ -1,7 +1,17 @@
+<h3>Artwork: <%= @viewing.artwork.name %></h3>
+<h3>Specialist: <%= @viewing.artwork.specialist.name %></h3>
+
+
+
+
+
+
+
 
 <p>Comments: </p>
 <h4><%= @viewing.comments %></h4>
 
-<p> <%= link_to "Back", :back %> </p>
 
-<%= button_to "Delete", viewing_path, method: :delete %>
+<p> <%= link_to "Back", :back %> </p>
+<%= link_to "Edit", edit_viewing_path %>
+<%= button_to "Cancel", viewing_path, method: :delete %>

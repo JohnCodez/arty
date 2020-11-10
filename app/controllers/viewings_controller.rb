@@ -24,6 +24,8 @@ class ViewingsController < ApplicationController
 
     def edit
         @viewing = Viewing.find(params[:id])
+
+        render :edit
     end
 
     def update 
@@ -33,6 +35,7 @@ class ViewingsController < ApplicationController
             redirect_to viewing_path(@viewing)
         else
             flash[:viewing_errors]
+            redirect_to edit_viewing_path
         end
     end
 
