@@ -1,10 +1,18 @@
 class UsersController < ApplicationController
+    skip_before_action :authorization, only: [:new, :create]
+
+
     def index
         @users = User.all
     end
 
     def show
         @user = User.find(params[:id])
+
+        if @user !=@current_user 
+            flash[:profile_error] = "Excuse me what are you doing!"
+            redirect_to user_path 
+        end
     end
 
     def new
@@ -26,6 +34,6 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:name, :password)
+        params.require(:user).permit(:name, :user_name, :password)
     end
 end

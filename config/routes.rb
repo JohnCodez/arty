@@ -4,11 +4,12 @@ Rails.application.routes.draw do
   resources :artworks
   resources :viewings
   resources :users
-  root 'artworks#index'
-
   resources :sessions
-  # delete '/sessions/page_reset', to: 'sessions#page_reset', as: 'page_reset'
-  delete '/sessions/logout', to: 'sessions#logout', as: 'logout'
+  # root 'artworks#index'
 
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  delete '/sessions/logout', to: 'sessions#logout', as: 'logout'
+  post '/sessions/new', to: 'sessions#new', as: 'new_login'
+  post '/sessions', to: 'sessions#create', as: 'login'
+  
 end

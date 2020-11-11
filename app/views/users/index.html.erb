@@ -1,5 +1,9 @@
 <h1>Users</h1>
 
+<% if flash[:profile_error] %>
+<p> <%= flash[:profile_error] %></p>
+<%end%>
+
 <% @users.each do |user|%>
 <h2><%= link_to user.name, user_path(user) %></h2>
 <% end %>
