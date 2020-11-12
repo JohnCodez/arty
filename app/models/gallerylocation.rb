@@ -3,7 +3,7 @@ class Gallerylocation < ApplicationRecord
     has_many :specialists, through: :artworks 
 
 
-    validates :name, :location, presence: true
-    validates :name, :location, uniqueness: true
+    # validates :name, :location, presence: true
+    # validates :name, :location, uniqueness: true
 
 end
