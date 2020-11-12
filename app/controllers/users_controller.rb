@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
         if @user !=@current_user 
             flash[:profile_error] = "Excuse me what are you doing!"
-            redirect_to user_path 
+            redirect_to users_path 
         end
     end
 
@@ -28,6 +28,14 @@ class UsersController < ApplicationController
         else
             flash[:user_errors] = user.errors.full_messages
             redirect_to new_user_path;
+        end
+
+
+    def destroy
+            @user = User.find_by(params[:id])
+            @user.destroy
+    
+            redirect_to users_path
         end
     end
 

@@ -22,9 +22,16 @@ class SpecialistsController < ApplicationController
         end
     end
 
+    def destroy
+        @specialist = Specialist.find(params[:id])
+        @specialist.destroy
+
+        redirect_to specialists_path
+    end
+
     private
 
     def specialist_params
-        params.require(:specialist).permit(:name, :bio, :specialty)
+        params.require(:specialist).permit(:name, :bio, :speciality)
     end
 end

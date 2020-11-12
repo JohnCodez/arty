@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :viewings
   resources :users
   resources :sessions
-  # root 'artworks#index'
+  root 'sessions#new'
 
   
   delete '/sessions/logout', to: 'sessions#logout', as: 'logout'

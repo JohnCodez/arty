@@ -1,15 +1,9 @@
-<h3>Artwork: <%= @viewing.artwork.name %></h3>
-<h3>Specialist: <%= @viewing.artwork.specialist.name %></h3>
+<h3>Artwork: <%= link_to @viewing.artwork.name, artwork_path(@viewing.artwork) %></h3>
+<h3>Specialist: <%= link_to @viewing.artwork.specialist.name, specialist_path(@viewing.artwork.specialist) %></h3>
 
 
 
 
-
-
-
-
-<p>Comments: </p>
-<h4><%= @viewing.comments %></h4>
 
 
 <p> <%= link_to "Back", :back %> </p>

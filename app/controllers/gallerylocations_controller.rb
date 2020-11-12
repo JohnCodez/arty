@@ -22,6 +22,14 @@ class GallerylocationsController < ApplicationController
         end
     end
 
+    def destroy
+        @gallerylocation = Gallerylocation.find(params[:id])
+        @gallerylocation.destroy
+
+        redirect_to gallerylocations_path
+    end
+
+
     private
 
     def gallerylocation_params
