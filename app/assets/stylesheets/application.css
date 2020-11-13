@@ -88,6 +88,18 @@
     justify-content: space-around;
 }
 
+
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+.artwork-link { 
+    flex-flow: row wrap;
+}
+
 .artwork img {
     max-width: 150px;
 }
