@@ -1,4 +1,8 @@
+
+
+<%= image_tag @artwork.artwork_path %>
 <h1><%= @artwork.name %></h1>
+<h2> <%= @artwork.artist_name%> </h2>
 <h4>Size: <%= @artwork.size %></h4>
 <h4>Medium: <%= @artwork.medium %></h4>
 <h4>Specialist: <%= link_to @artwork.specialist.name, specialist_path(@artwork.specialist) %> </h4>

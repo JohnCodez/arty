@@ -1,8 +1,9 @@
 <h1>Artworks</h1>
-
-<% @artworks.each do |artwork|%>
-<h4><%= link_to artwork.name, artwork_path(artwork) %></h4>
-
-<% end %>
+<div class="artwork">
+    <% @artworks.each do |artwork|%>
+    <h4><%= link_to artwork.name, artwork_path(artwork) %></h4>
+    <%= image_tag artwork.artwork_path %>
+    <% end %>
+</div>
 
 

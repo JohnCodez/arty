@@ -3,6 +3,7 @@
 <% @specialists.each do |specialist|%>
 <h2><%= link_to specialist.name, specialist_path(specialist) %></h2>
 <h4>Speciality:<%= specialist.speciality %></h4>
+<%= image_tag specialist.image_path %>
 <% end %>
 
 <h4><%= link_to "Apply to be one of our Beloved Specialists", new_specialist_path %> </h4>

@@ -17,9 +17,23 @@ Gallerylocation.destroy_all
 User.create!(name: Faker::Movies::Lebowski.character, user_name: Faker::Internet.username, password: "pass123")
 end 
 
-5.times do 
-Specialist.create!(name: Faker::Movies::Departed.character, bio: Faker::Quotes::Shakespeare.hamlet_quote, speciality: Faker::Games::Zelda.game)
-end 
+
+Specialist.create!(name: "Chris Clark", bio: "", speciality: "Sculptures/Art History", image_path: "https://cdn.discordapp.com/attachments/768857014070673499/776103191758372864/suited1.jpg")
+
+Specialist.create!(name: "Jomarie Polanco", bio: "", speciality: "19th Century Art", image_path: "https://cdn.discordapp.com/attachments/771014875438514206/775867175865024532/22323326_10156598362335828_1103503951_n.jpg")
+
+Specialist.create!(name: "Steven Wu", bio: "", speciality: "Art", image_path: "https://cdn.discordapp.com/attachments/768853472325140541/776100201538650172/image0.png")
+
+Specialist.create!(name: "Rebecca Robbins", bio: "", speciality: "Art History", image_path: "https://cdn.discordapp.com/attachments/767913828632887357/776160349648584714/7E34DAA0-6B93-461B-A7C8-94F96BB85BC3.jpeg")
+
+
+
+
+
+
+# 5.times do 
+# Specialist.create!(name: Faker::Movies::Departed.character, bio: Faker::Quotes::Shakespeare.hamlet_quote, speciality: Faker::Games::Zelda.game)
+# end 
 
 5.times do
 Gallerylocation.create!(name: Faker::Games::Witcher.witcher, location: Faker::Games::Witcher.location)
