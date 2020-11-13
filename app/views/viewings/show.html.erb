@@ -1,4 +1,6 @@
+<h3> Artist: <%= @viewing.artwork.artist_name %> </h3>
 <h3>Artwork: <%= link_to @viewing.artwork.name, artwork_path(@viewing.artwork) %></h3>
+<%= image_tag @viewing.artwork.artwork_path %>
 <h3>Specialist: <%= link_to @viewing.artwork.specialist.name, specialist_path(@viewing.artwork.specialist) %></h3>
 
 

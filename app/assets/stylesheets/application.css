@@ -74,9 +74,12 @@
     width: 20%;
 }
 
+.title {
+
+}
+
 
 .artwork {
-    border: 1px solid brown;
     display: flex;
     max-width: 100%;
     margin: 0px auto;
@@ -87,5 +90,18 @@
 
 .artwork img {
     max-width: 150px;
+}
+
+.art img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.pic {
+    border: 1px solid teal;
+    background-color: teal;
+    padding: 10px;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
 }
 
